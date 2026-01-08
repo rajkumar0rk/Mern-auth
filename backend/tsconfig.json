@@ -4,17 +4,13 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "app/*": ["./src/app/*"],
-      "config/*": ["./src/app/_config/*"],
-      "environment/*": ["./src/environments/*"],
-      "shared/*": ["./src/app/_shared/*"],
-      "helpers/*": ["./src/helpers/*"],
-      "tests/*": ["./src/tests/*"]
+      "@config/*": ["config/*"],
+      "@controllers/*": ["controllers/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@models/*": ["models/*"],
+      "@routes/*": ["routes/*"]
     }
   },
   "include": ["src/**/*"],

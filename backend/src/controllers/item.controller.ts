@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { items, Item } from '#models/item.model.js';
+import { items, Item } from '@models/item.model.js';
 
 // Create an item
 export const createItem = (req: Request, res: Response, next: NextFunction) => {
