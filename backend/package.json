@@ -20,6 +20,7 @@
   "type": "module",
   "private": true,
   "dependencies": {
+    "dotenv": "^17.2.3",
     "express": "^5.2.1"
   },
   "devDependencies": {
@@ -39,7 +40,7 @@
   "imports": {
     "#*": "./src/*"
   },
-    "lint-staged": {
+  "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint",
       "prettier --check"

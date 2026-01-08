@@ -1,15 +1,6 @@
-import express from "express";
+import app from '#app.js';
+import config from '#config/config.js';
 
-import second from '#middlewares/test.middleware.js'
-
-const app = express();
-const port = process.env.PORT ?? "9001";
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-  console.log("Response sents");
-});
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.listen(config.port, () => {
+  console.log(`Server running on port ${config.port}`);
 });
