@@ -2,8 +2,21 @@
   "extends": "@tsconfig/node24/tsconfig.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "rootDir": "./"
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "app/*": ["./src/app/*"],
+      "config/*": ["./src/app/_config/*"],
+      "environment/*": ["./src/environments/*"],
+      "shared/*": ["./src/app/_shared/*"],
+      "helpers/*": ["./src/helpers/*"],
+      "tests/*": ["./src/tests/*"]
+    }
   },
-  "include": ["**/*.ts"],
-  "exclude": ["dist","node_modules"]
+  "include": ["src/**/*"],
+  "exclude": ["dist", "node_modules"]
 }

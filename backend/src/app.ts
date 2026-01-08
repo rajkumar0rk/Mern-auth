@@ -1,14 +1,14 @@
 import express from 'express';
-import itemRoutes from '#routes/item.route.js';
-import { errorHandler } from '#middlewares/errorHandler.js';
+import itemRoutes from '#routes/item.route';
+import { errorHandler } from '#middlewares/errorHandler';
 
 const app = express();
 
 app.use(express.json());
 
 // Health check
-app.get("/health", (req, res) => {
-  res.status(200).json({states:"success"});
+app.get('/health', (req, res) => {
+  res.status(200).json({ states: 'success' });
 });
 
 // Routes

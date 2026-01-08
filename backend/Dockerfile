@@ -1,6 +1,7 @@
 FROM node:24-alpine
 RUN addgroup -S mern-group && adduser -S -D -G mern-group mern-user
 USER mern-user
+RUN mkdir /app
 WORKDIR /app
 
 COPY package*.json .
