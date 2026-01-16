@@ -11,7 +11,8 @@ const getEnv = (key: string, defaultValue?: string): string => {
   return value
 }
 
-export const PROT = Number(getEnv("PORT", "3000"))
-export const NODE_ENV = getEnv("NODE_ENV", 'development')
+export const PROT = Number(getEnv("PORT", "3000"));
+export const NODE_ENV = getEnv("NODE_ENV", 'development');
 export const MONGO_URL = getEnv("MONGO_URL");
+export const APP_ORIGIN = getEnv("APP_ORIGIN");
 

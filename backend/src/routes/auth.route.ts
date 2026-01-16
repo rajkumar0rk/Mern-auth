@@ -3,7 +3,7 @@ import { Router } from 'express';
 
 const authRoutes = Router();
 
-authRoutes.get("/register", registerHandler)
+authRoutes.post("/register", registerHandler)
 
 
 export default authRoutes

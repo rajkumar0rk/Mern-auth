@@ -1,9 +1,16 @@
 import express from 'express';
-import itemRoutes from '@routes/item.route.js';
 import { errorHandler } from '@middlewares/errorHandler.js';
 import authRoutes from '@routes/auth.route.js';
+import cors from 'cors';
+
+import { APP_ORIGIN } from '@constants/env.js';
 
 const app = express();
+
+app.use(cors({
+  origin: APP_ORIGIN,
+  credentials: true
+}))
 
 app.use(express.json());
 
@@ -13,7 +20,6 @@ app.get('/health', (req, res) => {
 });
 
 // Routes
-app.use('/api/items', itemRoutes);
 app.use("/api/v1/auth", authRoutes)
 
 // Global error handler (should be after routes)

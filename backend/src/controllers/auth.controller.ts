@@ -10,7 +10,7 @@ export const registerHandler = catchErrors(async (req, res) => {
     userAgent: req.headers["user-agent"]
   })
 
-  const { } = createAccount(request)
+  const user = await createAccount(request)
 
-  return res.send()
+  return res.status(200).json(user)
 })
