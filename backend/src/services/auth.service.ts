@@ -5,5 +5,5 @@ interface CreateAccountParams {
 }
 
 export const createAccount = (data: CreateAccountParams) => {
-
+  
 }
