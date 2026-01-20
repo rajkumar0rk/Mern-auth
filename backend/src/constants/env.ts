@@ -5,14 +5,14 @@ dotenv.config();
 const getEnv = (key: string, defaultValue?: string): string => {
   const value = process.env[key] || defaultValue;
 
-  if (value === undefined)
-    throw Error(`Missing String environment variable for ${key}`)
+  if (value === undefined) throw Error(`Missing String environment variable for ${key}`);
 
-  return value
-}
+  return value;
+};
 
-export const PROT = Number(getEnv("PORT", "3000"));
-export const NODE_ENV = getEnv("NODE_ENV", 'development');
-export const MONGO_URL = getEnv("MONGO_URL");
-export const APP_ORIGIN = getEnv("APP_ORIGIN");
-
+export const PROT = Number(getEnv('PORT', '3000'));
+export const NODE_ENV = getEnv('NODE_ENV', 'development');
+export const MONGO_URI = getEnv('MONGO_URI');
+export const APP_ORIGIN = getEnv('APP_ORIGIN');
+export const JWT_REFRESH_SECRET = getEnv('JWT_REFRESH_SECRET');
+export const JWT_SECRET = getEnv('JWT_SECRET');

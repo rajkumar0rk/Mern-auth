@@ -9,7 +9,7 @@ RUN chown -R appuser:appgroup /app
 USER appuser
 
 COPY --chown=appuser:appgroup package*.json .
-RUN npm install
+RUN npm ci --only=production
 
 COPY --chown=appuser:appgroup . .
 RUN npm run build
