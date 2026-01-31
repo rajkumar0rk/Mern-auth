@@ -1,7 +1,7 @@
 import type { CookieOptions, Response } from 'express';
 import { fiftyMinutesFromNow, thirtyDaysFromNow } from './date.js';
 
-export const REFRESH_PATH = '/auth/refresh';
+export const REFRESH_PATH = 'api/v1/auth/refresh';
 interface Params {
   res: Response;
   accessToken: string;
@@ -9,15 +9,16 @@ interface Params {
 }
 
 const defaults: CookieOptions = {
-  sameSite: 'strict',
+  sameSite: 'lax',
   httpOnly: true,
-  secure: true,
+  secure: false,
 };
 
 export const getAccessTokenCookieOption = (): CookieOptions => {
   return {
     ...defaults,
     expires: fiftyMinutesFromNow(),
+    path: '/',
   };
 };
 export const getRefreshTokenCookieOption = (): CookieOptions => {

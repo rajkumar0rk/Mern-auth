@@ -39,6 +39,7 @@ const Login = () => {
                     type="email"
                     placeholder="m@example.com"
                     {...register("email")}
+                    autoComplete="username"
                     required
                   />
                   <FieldError>
@@ -59,6 +60,7 @@ const Login = () => {
                     id="password"
                     type="password"
                     {...register("password")}
+                    autoComplete="current-password"
                     required
                   />
                   <FieldError>
