@@ -15,8 +15,7 @@ export const useRegister = () => {
     isError,
     error,
   } = useMutation<RegisterResponse, Error, RegisterType>({
-    mutationFn: async (data) =>
-      await registerApi<RegisterType, RegisterResponse>(data),
+    mutationFn: registerApi,
     onSuccess: () => {
       navigateTo("/");
     },
