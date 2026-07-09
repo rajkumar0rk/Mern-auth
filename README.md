@@ -1,4 +1,3 @@
 # Mern-auth
 
 Authentication app
-
