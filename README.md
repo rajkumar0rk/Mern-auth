@@ -180,10 +180,10 @@ Every push to `main` runs through GitHub Actions (`.github/workflows/ci.yml`): d
 
 ## Roadmap / Ideas for Extension
 
-- Wire up transactional email sending (Resend) for verification and password reset links
-- Add automated backend tests
-- Add rate limiting middleware at the app level
-- Add OAuth providers (Google/GitHub) alongside email/password auth
+- [ ] Wire up transactional email sending (Resend) for verification and password reset links
+- [ ] Add automated backend tests
+- [ ] Add rate limiting middleware at the app level
+- [ ] Add OAuth providers (Google/GitHub) alongside email/password auth
 
 ## License
 
